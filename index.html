@@ -45,56 +45,45 @@
 Background:
 <select id="slct1" name="slct1">
   <option value=""></option>
-  <option value="1">Swirls</option>
+  <option value="Beach">Beach</option>
+  <option value="BlankCanvas">Blank Canvas</option>
+  <option value="BlueBlend">Blue Blend</option>
+  <option value="Bronze">Bronze</option>
+  <option value="DesertSand">Desert Sand</option>
+  <option value="GlassTeal">Glass Teal</option>
+  <option value="LakeBlue">Lake Blue</option>
+  <option value="Pietrobain">Pietrobain</option>
+  <option value="Pink">Pink</option>
+  <option value="SkyBlue">Sky Blue</option>
+  <option value="StreetArtBobby">Street Art Bobby</option>
 </select>
 <br />
 Body:
 <select id="slct2" name="slct2">
   <option value=""></option>
-  <option value="1">Plain</option>
+  <option value="Wag">Wag</option>
 </select>
 <br />
 Eyes:
 <select id="slct3" name="slct3">
   <option value=""></option>
-  <option value="eyes">Eyes</option>
+  <option value="Peep">Peep</option>
+  <option value="Loopy">Loopy</option>
 </select>
 <br />
 Mouth:
 <select id="slct4" name="slct4">
   <option value=""></option>
-  <option value="BubbleBlower">Bubble Blower</option>
-  <option value="BuckWheat">Buck Wheat</option>
-  <option value="Calm">Calm</option>
-  <option value="Craving">Craving</option>
-  <option value="FarmersChew">Farmers Chew</option>
-  <option value="ForkedTongue">Forked Tongue</option>
-  <option value="Happy">Happy</option>
-  <option value="Silly">Silly</option>
-  <option value="Sucker">Sucker</option>
-  <option value="TeenSpiritSniffer">Teen Spirit Sniffer</option>
-  <option value="TripleTongue">Triple Tongue</option>
+  <option value="Chattering">Chattering</option>
+  <option value="craving">Craving</option>
+  <option value="Grillz">Grillz</option>
+  <option value="Panting">Panting</option>
 </select>
 <br />
 Headwear:
 <select id="slct6" name="slct6">
   <option value=""></option>
-  <option value="None">None</option>
-  <option value="BlueandYellowMowhawk">Blue and Yellow Mowhawk</option>
-  <option value="DegenHair">Degen Hair</option>
-  <option value="Gladiator">Gladiator</option>
-  <option value="GrimeBeanie">Grime Beanie</option>
-  <option value="HPBandana">HP Bandana</option>
-  <option value="ImposterBobbyRabbit">Imposter Bobby Rabbit</option>
-  <option value="Mullet">Mullet</option>
-  <option value="PirateHat">Pirate Hat</option>
-  <option value="RedMowhawk">Red Mowhawk</option>
-  <option value="RobinHoodHat">Robin Hood Hat</option>
-  <option value="SenpaiBandana">Senpai Bandana</option>
-  <option value="StarFox">Star Fox</option>
-  <option value="StonedTigerHat">Stoned Tiger Hat</option>
-  <option value="WillyWonkaHat">WillyWonkaHat</option>
-  <option value="WorkOutBand">Work Out Band</option>
+  <option value="Degen">Degen</option>
 </select>
 <br />
 Eyewear:
@@ -161,14 +150,16 @@ Accessories:
 </div>
 
 <!-- Create an image element for bg in your HTML code -->
-<img class="preview" id="myImagebg">
-<img class="preview" id="myImageskin">
-<img class="preview" id="myImageeyes">
-<img class="preview" id="myImagemouth">
-<img class="preview" id="myImageshirt">
-<img class="preview" id="myImageheadwear">
-<img class="preview" id="myImageeyewear">
-<img class="preview" id="myImageaccessory">
+<div id="Canvas">
+   <img class="preview" id="myImagebg">
+   <img class="preview" id="myImageskin">
+   <img class="preview" id="myImageeyes">
+   <img class="preview" id="myImagemouth">
+   <img class="preview" id="myImageshirt">
+   <img class="preview" id="myImageheadwear">
+   <img class="preview" id="myImageeyewear">
+   <img class="preview" id="myImageaccessory">
+</div>
 
 
 <!-- <button onclick="getBackground()"> Check Background </button>
@@ -220,8 +211,10 @@ Accessories:
 </script> 
 
 <script src="./TraitCombiner/traitcombiner2.js"></script>
+<script src="./TraitCombiner/screenshot.js"></script>
 
-<!-- <script>
+<script>
+   document.getElementById(Canvas);
    let imgEle1 = document.querySelectorAll(".image")[0];
    let imgEle2 = document.querySelectorAll(".image")[1];
    let imgEle3 = document.querySelectorAll(".image")[2];

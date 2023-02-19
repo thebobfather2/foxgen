@@ -4,11 +4,11 @@ slct1.options[slct1.selectedIndex].id;
 var slct2 = document.querySelector('#slct2');
 slct2.options[slct2.selectedIndex].id;
 
-    let imgEle1 = "./img/" + slct1.value +'.GIF';
-    let imgEle2 = "./img/" + slct2.value +'.GIF';
-    let imgEle3 = "./img/" + slct3.value +'.png';
+    let imgEle1 = "./img/" + slct1.value +'.png';
+    let imgEle2 = "./img/" + slct2.value +'.png';
+    let imgEle3 = "./img/" + slct3.value +'.gif';
     let imgEle4 = document.querySelectorAll(".image")[3];
-    let imgEle5 = document.querySelectorAll(".image")[4];
+    let imgEle5 = document.querySelectorAll(".gif")[4];
     let imgEle6 = "./img/" + slct6.value +'.png';
     let imgEle7 = "./img/" + slct7.value +'.png';
     let resEle = document.querySelector(".result");
@@ -51,6 +51,9 @@ slct2.options[slct2.selectedIndex].id;
 
 // const path = `www.example.com/Category-${option.value}/${images}/{$val}.png`;
 
+
+document.getElementById(Canvas);
+
 //token gate what is available in dropdown:
 function populate (s1,s2) {
   var s1 = document.getElementById(s1);
@@ -74,7 +77,7 @@ function populate (s1,s2) {
 function createFilePathbg() {
   var select = document.getElementById("slct1");
   var selectedValue = select.options[select.selectedIndex].value;
-  var filePathbg = "img/Background/" + selectedValue + ".GIF";
+  var filePathbg = "img/Background/" + selectedValue + ".png";
   return filePathbg;
 }
 // update image src for background
@@ -89,7 +92,7 @@ select.addEventListener("change", function() {
 function createFilePathskin() {
   var select2 = document.getElementById("slct2");
   var selectedValue2 = select2.options[select2.selectedIndex].value;
-  var filePathskin = "img/Body/" + selectedValue2 + ".png";
+  var filePathskin = "img/Body/" + selectedValue2 + ".gif";
   return filePathskin;
 }
 // update image src for skin
@@ -104,7 +107,7 @@ select2.addEventListener("change", function() {
 function createFilePatheyes() {
   var select3 = document.getElementById("slct3");
   var selectedValue3 = select3.options[select3.selectedIndex].value;
-  var filePatheyes = "img/Eyes/" + selectedValue3 + ".GIF";
+  var filePatheyes = "img/Eyes/" + selectedValue3 + ".gif";
   return filePatheyes;
 }
 // update image src for eyes
@@ -119,7 +122,7 @@ select3.addEventListener("change", function() {
 function createFilePathmouth() {
   var select4 = document.getElementById("slct4");
   var selectedValue4 = select4.options[select4.selectedIndex].value;
-  var filePathmouth = "img/Mouth/" + selectedValue4 + ".png";
+  var filePathmouth = "img/Mouth/" + selectedValue4 + ".gif";
   return filePathmouth;
 }
 // update image src for mouth
@@ -134,7 +137,7 @@ select4.addEventListener("change", function() {
 function createFilePathheadwear() {
   var select6 = document.getElementById("slct6");
   var selectedValue6 = select6.options[select6.selectedIndex].value;
-  var filePathheadwear = "img/Headwear/" + selectedValue6 + ".png";
+  var filePathheadwear = "img/Headwear/" + selectedValue6 + ".gif";
   return filePathheadwear;
 }
 // update image src for headwear
@@ -188,4 +191,9 @@ select8.addEventListener("change", function() {
     var filePathaccessory = createFilePathaccessory();
     var imgEle8 = document.getElementById("myImageaccessory");
     imgEle8.src = filePathaccessory
+});
+
+// capture
+html2canvas(document.querySelector("#Canvas")).then(canvas => {
+  document.body.appendChild(canvas)
 });
